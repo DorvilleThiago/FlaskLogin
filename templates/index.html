@@ -1,8 +1,15 @@
 {% extends "base.html" %} {% block title %}Login{% endblock %}
 
+{% block extracss %} 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+{% endblock %}
+
 {% block content %}
     <h1>Página principal</h1>
-    <a href="{{url_for('login')}}">Fazer login</a>
     <br>
-    <a href="{{url_for('register')}}">Fazer Registro</a>
+    <p>Parabéns, você está autenticado!</p>
+    <br>
+    <a href="{{url_for('logout')}}">Clique aqui para sair da sua conta</a>
 {% endblock %}
